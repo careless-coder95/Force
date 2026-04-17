@@ -30,14 +30,14 @@ from pyrogram.types import (
 # ==============================================================
 
 # Bot admins (unhe seedha main menu milega)
-ADMINS = [123456789]  # Apna Telegram user_id yahan daalein
+ADMINS = [5864182070]  # Apna Telegram user_id yahan daalein
 
 # Required channels jinka member hona zaroori hai
 # title  → button par dikhnay wala naam
 # link   → invite / public link
 REQUIRED_CHANNELS = [
-    {"_id": "@yourchannel1",  "title": "Main Channel",   "link": "https://t.me/yourchannel1"},
-    {"_id": "@yourchannel2",  "title": "Update Channel", "link": "https://t.me/yourchannel2"},
+    {"_id": "@@musicgroupxd",  "title": "Main Channel",   "link": "https://t.me/musicgroupxd"},
+    {"_id": "@@phblicdarling",  "title": "Update Channel", "link": "https://t.me/phblicdarling"},
     # Aur channels yahan add karo...
 ]
 
