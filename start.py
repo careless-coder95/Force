@@ -289,20 +289,20 @@ async def tivra_pay_handler(client: Client, msg: Message):
     #)
 
     # Example: Image + Text + Inline Buttons (uncomment karke use karo)
-     await msg.reply_photo(
-         photo="FILE_ID_YA_URL",
+     #await msg.reply_photo(
+      #   photo="FILE_ID_YA_URL",
+      #   caption=text,
+      #   parse_mode=enums.ParseMode.HTML,
+       #  reply_markup=inline_buttons,
+     #)
+
+    # Example: Video + Text + Inline Buttons (uncomment karke use karo)
+     await msg.reply_video(
+         video="BAACAgEAAxkBAAMEaeJgowABHm--uQsp6-OY3SMZE5UkAAKXCQACxI4IRz0WM-vgGpjmOwQ",
          caption=text,
          parse_mode=enums.ParseMode.HTML,
          reply_markup=inline_buttons,
      )
-
-    # Example: Video + Text + Inline Buttons (uncomment karke use karo)
-    # await msg.reply_video(
-    #     video="FILE_ID_YA_URL",
-    #     caption=text,
-    #     parse_mode=enums.ParseMode.HTML,
-    #     reply_markup=inline_buttons,
-    # )
 
 
 # ==============================================================
