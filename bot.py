@@ -1,9 +1,6 @@
-import asyncio
 import logging
-from telegram import Update
-from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, MessageHandler, filters, ContextTypes
+from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, MessageHandler, filters
 import config
-from database import db
 from handlers import admin_handler, user_handler
 
 logging.basicConfig(
@@ -12,7 +9,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-async def main():
+def main():
     app = ApplicationBuilder().token(config.BOT_TOKEN).build()
 
     # User handlers
@@ -24,11 +21,11 @@ async def main():
     app.add_handler(CallbackQueryHandler(user_handler.verify_callback, pattern="^verify$"))
     app.add_handler(CallbackQueryHandler(user_handler.handle_menu_button, pattern="^menu_btn_"))
     
-    # Message handler for admin input
+    # Message handler
     app.add_handler(MessageHandler(filters.ALL & ~filters.COMMAND, admin_handler.handle_input))
 
     logger.info("Bot started!")
-    await app.run_polling(drop_pending_updates=True)
+    app.run_polling(drop_pending_updates=True)
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()
