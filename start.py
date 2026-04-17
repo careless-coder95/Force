@@ -42,7 +42,7 @@ REQUIRED_CHANNELS = [
 ]
 
 # Welcome image ka FILE_ID ya local path
-WELCOME_IMAGE = "AgACAgIAAxk..."  # Telegram ka file_id yahan paste karo
+WELCOME_IMAGE = "AgACAgUAAxkBAAMCaeJgQzT8-hyPDedVeMWxiC_p02QAAmESaxvg8RBXjYEx96kJgK0BAAMCAAN5AAM7BA"  # Telegram ka file_id yahan paste karo
 
 # ==============================================================
 # 🎹 KEYBOARDS
@@ -282,19 +282,19 @@ async def tivra_pay_handler(client: Client, msg: Message):
     # Sirf text chahiye? → send_message use karo
 
     # Example: Text + Inline Buttons (image nahi)
-    await msg.reply_text(
-        text=text,
-        parse_mode=enums.ParseMode.HTML,
-        reply_markup=inline_buttons,
-    )
+    #await msg.reply_text(
+    #    text=text,
+    #    parse_mode=enums.ParseMode.HTML,
+    #    reply_markup=inline_buttons,
+    #)
 
     # Example: Image + Text + Inline Buttons (uncomment karke use karo)
-    # await msg.reply_photo(
-    #     photo="FILE_ID_YA_URL",
-    #     caption=text,
-    #     parse_mode=enums.ParseMode.HTML,
-    #     reply_markup=inline_buttons,
-    # )
+     await msg.reply_photo(
+         photo="FILE_ID_YA_URL",
+         caption=text,
+         parse_mode=enums.ParseMode.HTML,
+         reply_markup=inline_buttons,
+     )
 
     # Example: Video + Text + Inline Buttons (uncomment karke use karo)
     # await msg.reply_video(
