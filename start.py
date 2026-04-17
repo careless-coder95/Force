@@ -1,19 +1,3 @@
-"""
-╔══════════════════════════════════════════╗
-║        TIVRA PAY BOT - start.py          ║
-║   Force Subscribe + Verify + Main Menu   ║
-╚══════════════════════════════════════════╝
-
-STRUCTURE:
-  /start  →  Welcome Image + FSub Inline Buttons
-             + Niche menu: [ ✅ Verify ]
-
-  After Verify  →  Menu: [ 💳 Tivra Pay ] [ 📞 Support ]
-                          [ 📢 Channel ] [ 📩 Contact Us ]
-
-  Har button ka content niche clearly marked sections mein hai.
-  Tum wahan apna text/image/video/inline button add kar sakte ho.
-"""
 
 from pyrogram import Client, filters, enums
 from pyrogram.types import (
